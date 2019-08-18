@@ -610,7 +610,7 @@ angular.module('ui.carousel.controllers')
      * @author tarkant
      */
     $scope.$on('$destroy', function () {
-      angular.element($window).off('resize');
+      angular.element($window).off('resize', this.refreshCarousel);
     });
 
     // Prior to v1.5, we need to call `$onInit()` manually.
